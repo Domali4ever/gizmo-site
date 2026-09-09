@@ -191,9 +191,10 @@ a:hover { color: #1fb755; }
 @media (max-width: 1024px) { #gz-scroll { --gz-rail: 60px; } }
 @media (max-width: 900px) {
   #gz-scroll { --gz-rail: 0px; }
-  [data-gz-rail] { left: 0; right: 0; top: auto; bottom: 0; width: auto; height: 58px;
-    flex-direction: row; justify-content: center; gap: 14px; padding: 0 16px;
-    border-right: 0; border-top: 3px solid #f7f7f7; }
+  #gz-content { grid-column: 1 / -1 !important; }
+  [data-gz-rail] { position: fixed !important; left: 0 !important; right: 0 !important; top: auto !important;
+    bottom: 0 !important; height: 58px !important; flex-direction: row !important; justify-content: center !important;
+    gap: 14px; padding: 0 16px !important; border-right: 0 !important; border-top: 3px solid #f7f7f7; }
   [data-gz-rail-letters] { flex-direction: row !important; }
   [data-gz-rail-mark], [data-gz-rail-year] { display: none; }
   [data-gz-section] { padding-bottom: calc(58px + var(--gz-pad-y)) !important; }

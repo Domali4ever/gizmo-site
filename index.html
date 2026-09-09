@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div id="gz-scroll" style="--gz-rail: 76px; --gz-pad-y: clamp(24px, 4vh, 56px); --gz-pad-x: clamp(20px, 5vw, 80px); height: 100dvh; overflow-x: hidden; overflow-y: auto; background: #18181b; font-family: Archivo, sans-serif; color: #f7f7f7;">
-  <div data-gz-rail="" style="position: fixed; left: 0; top: 0; bottom: 0; width: var(--gz-rail); background: #18181b; z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 18px 0; box-sizing: border-box; border-right: 3px solid #f7f7f7;">
+<div id="gz-scroll" style="--gz-rail: 76px; --gz-pad-y: clamp(24px, 4vh, 56px); --gz-pad-x: clamp(20px, 5vw, 80px); display: grid; grid-template-columns: var(--gz-rail) minmax(0, 1fr); height: 100dvh; overflow-x: hidden; overflow-y: auto; background: #18181b; font-family: Archivo, sans-serif; color: #f7f7f7;">
+  <div data-gz-rail="" style="position: sticky; top: 0; align-self: start; height: 100dvh; background: #18181b; z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 18px 0; box-sizing: border-box; border-right: 3px solid #f7f7f7;">
     <a href="#g-hero" data-gz-rail-mark="" style="display: block; line-height: 0;"><img src="assets/svg/lens-mark.svg" alt="Gizmo lens mark" style="width: 38px; height: 38px;"></a>
     <div data-gz-rail-letters="" style="display: flex; flex-direction: column; gap: 10px;">
       <a href="#make" data-rail="1" data-color="#084a8c" data-fg="#f7f7f7" title="Make" aria-label="Make" style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-family: 'Archivo Black', sans-serif; font-size: 18px; line-height: 1; border: 3px solid #3f3f46; background: transparent; color: #8c8c94; box-shadow: none; transition: background 0.35s, color 0.35s, box-shadow 0.35s;">G</a>
@@ -22,7 +22,9 @@
     <div data-gz-rail-year="" style="font-size: 12px; font-weight: 700; color: #1fb755;">©26</div>
   </div>
 
-  <section data-gz-section="" id="g-hero" data-screen-label="Hero" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #18181b; position: relative; display: flex; flex-direction: column; gap: clamp(16px, 3vh, 40px); padding: var(--gz-pad-y) var(--gz-pad-x) var(--gz-pad-y) calc(var(--gz-rail) + var(--gz-pad-x)); box-sizing: border-box;">
+  <div id="gz-content" style="min-width: 0;">
+
+  <section data-gz-section="" id="g-hero" data-screen-label="Hero" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #18181b; position: relative; display: flex; flex-direction: column; gap: clamp(16px, 3vh, 40px); padding: var(--gz-pad-y) var(--gz-pad-x); box-sizing: border-box;">
 
     <div aria-hidden="true" class="gz-tiles" id="tiles-hero"></div>
     <svg aria-hidden="true" viewBox="0 0 1000 600" preserveAspectRatio="none" style="position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; pointer-events: none;">
@@ -63,7 +65,7 @@
     </div>
   </section>
 
-  <section data-gz-section="" id="make" data-screen-label="G — Make" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #084a8c; position: relative; display: flex; align-items: center; padding: var(--gz-pad-y) var(--gz-pad-x) var(--gz-pad-y) calc(var(--gz-rail) + var(--gz-pad-x)); box-sizing: border-box;">
+  <section data-gz-section="" id="make" data-screen-label="G — Make" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #084a8c; position: relative; display: flex; align-items: center; padding: var(--gz-pad-y) var(--gz-pad-x); box-sizing: border-box;">
 
     <div aria-hidden="true" class="gz-tiles" id="tiles-make"></div>
     <img data-letter="" data-gz-bg-letter="" src="assets/svg/bg-letter-g.svg" alt="" style="position: absolute; right: 0; top: 0; height: 100%; width: auto; z-index: 1; pointer-events: none;">
@@ -97,7 +99,7 @@
     </div>
   </section>
 
-  <section data-gz-section="" id="play" data-screen-label="I — Play" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #e8323a; position: relative; display: flex; align-items: center; justify-content: flex-end; padding: var(--gz-pad-y) var(--gz-pad-x) var(--gz-pad-y) calc(var(--gz-rail) + var(--gz-pad-x)); box-sizing: border-box;">
+  <section data-gz-section="" id="play" data-screen-label="I — Play" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #e8323a; position: relative; display: flex; align-items: center; justify-content: flex-end; padding: var(--gz-pad-y) var(--gz-pad-x); box-sizing: border-box;">
 
     <div aria-hidden="true" class="gz-tiles" id="tiles-play"></div>
     <img data-letter="" data-gz-bg-letter="" src="assets/svg/bg-letter-i.svg" alt="" style="position: absolute; left: 0; top: 0; height: 100%; width: auto; z-index: 1; pointer-events: none;">
@@ -130,7 +132,7 @@
     </div>
   </section>
 
-  <section data-gz-section="" id="reframe" data-screen-label="Z — Reframe" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #1fb755; position: relative; display: flex; align-items: center; padding: var(--gz-pad-y) var(--gz-pad-x) var(--gz-pad-y) calc(var(--gz-rail) + var(--gz-pad-x)); box-sizing: border-box;">
+  <section data-gz-section="" id="reframe" data-screen-label="Z — Reframe" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #1fb755; position: relative; display: flex; align-items: center; padding: var(--gz-pad-y) var(--gz-pad-x); box-sizing: border-box;">
 
     <div aria-hidden="true" class="gz-tiles" id="tiles-reframe"></div>
     <img data-letter="" data-gz-bg-letter="" src="assets/svg/bg-letter-z.svg" alt="" style="position: absolute; right: 0; top: 0; height: 100%; width: auto; z-index: 1; pointer-events: none;">
@@ -163,7 +165,7 @@
     </div>
   </section>
 
-  <section data-gz-section="" id="divergence" data-screen-label="M — Divergence" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #f9b233; position: relative; display: flex; align-items: center; justify-content: flex-end; padding: var(--gz-pad-y) var(--gz-pad-x) var(--gz-pad-y) calc(var(--gz-rail) + var(--gz-pad-x)); box-sizing: border-box;">
+  <section data-gz-section="" id="divergence" data-screen-label="M — Divergence" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #f9b233; position: relative; display: flex; align-items: center; justify-content: flex-end; padding: var(--gz-pad-y) var(--gz-pad-x); box-sizing: border-box;">
 
     <div aria-hidden="true" class="gz-tiles" id="tiles-divergence"></div>
     <img data-letter="" data-gz-bg-letter="" src="assets/svg/bg-letter-m.svg" alt="" style="position: absolute; left: 0; top: 0; height: 100%; width: auto; z-index: 1; pointer-events: none;">
@@ -195,7 +197,7 @@
     </div>
   </section>
 
-  <section data-gz-section="" id="make-it-matter" data-screen-label="O — Make It Matter" data-gz-mim="" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #18181b; position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: clamp(24px, 4vw, 72px); padding: var(--gz-pad-y) var(--gz-pad-x) var(--gz-pad-y) calc(var(--gz-rail) + var(--gz-pad-x)); box-sizing: border-box;">
+  <section data-gz-section="" id="make-it-matter" data-screen-label="O — Make It Matter" data-gz-mim="" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #18181b; position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: clamp(24px, 4vw, 72px); padding: var(--gz-pad-y) var(--gz-pad-x); box-sizing: border-box;">
 
     <div aria-hidden="true" class="gz-tiles" id="tiles-mim"></div>
     <div style="display: flex; flex-direction: column; justify-content: center; gap: clamp(10px, 2.4vh, 30px); min-width: 0; position: relative; z-index: 2;">
@@ -217,7 +219,7 @@
     <img data-letter="" data-gz-mim-mark="" src="assets/svg/lens-mark-mono-0.svg" alt="" style="width: clamp(0px, calc(100vw - 1080px), min(34vw, 66vmin, 620px)); height: auto; justify-self: end; position: relative; z-index: 1;">
   </section>
 
-  <section data-gz-section="" id="footer" data-screen-label="Footer" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #fff; color: #18181b; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: var(--gz-pad-y) var(--gz-pad-x) var(--gz-pad-y) calc(var(--gz-rail) + var(--gz-pad-x)); box-sizing: border-box;">
+  <section data-gz-section="" id="footer" data-screen-label="Footer" style="min-height: 100dvh; scroll-snap-align: start; overflow: hidden; background: #fff; color: #18181b; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: var(--gz-pad-y) var(--gz-pad-x); box-sizing: border-box;">
     <div style="display: flex; flex-direction: column; gap: 30px; justify-content: center; flex: 1;">
       <img data-reveal="" src="assets/svg/bg-wordmark-footer.svg" alt="GIZMO" style="width: min(880px, 84vw); height: auto; display: block;">
       <p data-reveal="" style="margin: 0; font-size: clamp(18px, 1.6vw, 24px); font-weight: 600;">The True Outlier. Question the premise, reveal the pattern, make it matter.</p>
@@ -233,6 +235,8 @@
       <img src="assets/svg/lens-mark.svg" alt="" style="width: 32px; height: 32px;">
     </div>
   </section>
+
+  </div>
 </div>
 <script src="script.js" defer></script>
 </body>
