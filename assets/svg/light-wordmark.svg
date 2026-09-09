@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 812.81 144.78">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect x="166.37" width="144.27" height="33.02" style="fill: #fafbfb;"/>
+      <rect x="167.9" y="45.47" width="144.27" height="98.81" style="fill: #fafbfb;"/>
+      <path d="M646.95.76h-144.27v143.77h33.53V35.05c6.6,0,11.94,4.83,11.94,10.67v99.06h49.28v-71.88c6.6,0,11.94,4.83,11.94,10.67v61.21h37.34V.76h.25Z" style="fill: #fafbfb;"/>
+      <path d="M144.02,46.74h-14.99v57.15c0,12.19-10.41,22.35-23.11,22.35h-47.75c-12.95,0-23.62-10.16-23.62-22.61V39.62h0c0-2.79,2.29-5.08,5.08-5.08h103.89V0H0v144.27h144.02V46.74Z" style="fill: #fafbfb;"/>
+      <path d="M334.78,33.02h93.73l-93.73,73.41v37.34h144.27v-37.34h-72.14v-10.41c0-13.46,12.19-24.13,27.43-24.13h44.7V0h-144.27v33.02Z" style="fill: #fafbfb;"/>
+      <circle cx="740.68" cy="72.14" r="72.14" style="fill: #fafbfb;"/>
+    </g>
+  </g>
+</svg>
