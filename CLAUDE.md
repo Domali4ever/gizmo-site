@@ -17,7 +17,7 @@ an embedded React runtime. It was converted to this plain form in 2026-08; if yo
 `<x-dc>`, `__bundler/*` script tags, or `{{ }}`/`sc-camel-*` template syntax again, that's leftover
 from an older export, not the current architecture.)
 
-- [index.html](index.html) — full markup for all 7 sections (hero, make, play, reframe, divergence,
+- [index.html](index.html) — full markup for all 7 sections (hero, make, play, adapt, divergence,
   make-it-matter, footer). Most element styling is inline (`style="..."`), matching each element's
   one-off design — this is intentional, not something to "clean up" into classes.
 - [styles.css](styles.css) — only what inline styles can't express: `@font-face` rules, the CSS
@@ -25,7 +25,7 @@ from an older export, not the current architecture.)
   magnet-tile rules, and every `:hover` rule (a real `:hover` selector can't live in a `style`
   attribute).
 - [script.js](script.js) — all interactivity: the magnet-tile cursor-follow hover effect per
-  section, the Make/Play/Reframe/Divergence card flip (click front or "View Services ↻" to flip,
+  section, the Make/Play/Adapt/Divergence card flip (click front or "View Services ↻" to flip,
   "↩ Back" to flip back), the left-rail scroll progress indicator, and the scroll-triggered
   fade/slide-in reveal animations. Driven by a `section[data-gz-section]` `IntersectionObserver`
   and plain `addEventListener` calls — no virtual DOM, no reactive re-render; each handler mutates
@@ -52,9 +52,9 @@ from an older export, not the current architecture.)
 ```text
 assets/svg/              backgrounds, wordmark, hero/heading graphics, lens mark (SVG only)
 assets/fonts/             5 woff2 files backing the @font-face rules in styles.css (Archivo x3 subsets, Archivo Black x2 subsets)
-lens-icons/               4 flat files: make-icon.svg, play-icon.svg, reframe-icon.svg, divergence-icon.svg
-stickers/svg/             the 4 big lens "stickers": MakeSticker.svg, PlaySticker.svg, ReframeSticker.svg, DivergenceSticker.svg
-companion-sprites/svg/   full-body character illustrations for the 4 lens companions: make.svg, play.svg, reframe.svg, divergence.svg
+lens-icons/               4 flat files: make-icon.svg, play-icon.svg, adapt-icon.svg, divergence-icon.svg
+stickers/svg/             big lens "stickers" for Make, Play, and Divergence: MakeSticker.svg, PlaySticker.svg, DivergenceSticker.svg
+companion-sprites/svg/   full-body character illustrations for the 4 lens companions: make.svg, play.svg, adapt.svg, divergence.svg
 companion-sprites/webp/  raster (webp) versions of the same 4 companions
 ```
 
@@ -71,8 +71,9 @@ Every file in `assets/`, `lens-icons/`, and `stickers/` is referenced from `inde
   heading graphics, the scroll-down indicator, the two "O" separators.
 - `assets/fonts/*.woff2` — referenced only from the `@font-face` `src: url(...)` rules at the top of
   [styles.css](styles.css).
-- `stickers/svg/*Sticker.svg` — one big sticker per section (the small icon shown next to each
-  card's "View Services" button — distinct from the magnet-tile background icon below).
+- `stickers/svg/*Sticker.svg` — the big icon shown next to each card's "View Services" button
+  (distinct from the magnet-tile background icon below), for the Make, Play, and Divergence cards.
+  The Adapt card uses `lens-icons/adapt-icon.svg` there instead — no sticker asset for it.
 - `lens-icons/*-icon.svg` — the small per-tile icon in each section's magnet-tile background
   effect, via the `ICON_SRC` map near the top of [script.js](script.js).
 
@@ -84,7 +85,7 @@ yet. When a use is decided, wire it the same way as the others: a plain relative
 
 `companion-sprites/turnarounds/` holds raster (PNG) production reference, not site assets — not
 referenced from `index.html` and not meant to be: 4 combined sheets (`t-pose-make.png`,
-`t-pose-play.png`, `t-pose-reframe.png`, `t-pose-divergence.png`, despite the filename these are
+`t-pose-play.png`, `t-pose-adapt.png`, `t-pose-divergence.png`, despite the filename these are
 front/three-quarter/back **turnarounds**, arms at the sides, not a literal T-pose) plus each one
 cropped into 3 separate `{name}-front.png` / `{name}-side.png` / `{name}-back.png` files. The
 individual crops exist to support a near-term "sprite-swap" idea — showing front/side/back based on
