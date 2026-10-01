@@ -167,11 +167,11 @@ a:hover { color: #1fb755; }
 .gz-hero-nav-make:hover { color: #3b82d4; }
 .gz-hero-nav-play:hover { color: #e8323a; }
 .gz-hero-nav-adapt:hover { color: #1fb755; }
-.gz-hero-nav-divergence:hover { color: #f9b233; }
+.gz-hero-nav-diverge:hover { color: #f9b233; }
 .gz-footer-nav-make:hover { color: #084a8c; }
 .gz-footer-nav-play:hover { color: #e8323a; }
 .gz-footer-nav-adapt:hover { color: #1fb755; }
-.gz-footer-nav-divergence:hover { color: #f9b233; }
+.gz-footer-nav-diverge:hover { color: #f9b233; }
 
 .gz-btn-view-work:hover { transform: translate(4px, 4px); box-shadow: 5px 5px 0 #084a8c; color: #18181b; }
 .gz-btn-hero-start:hover { transform: translate(4px, 4px); box-shadow: 5px 5px 0 #e8323a; color: #18181b; }
@@ -184,7 +184,7 @@ a:hover { color: #1fb755; }
 .gz-btn-services-make:hover { background: #f9b233; color: #084a8c; }
 .gz-btn-services-play:hover { background: #f7f7f7; color: #e8323a; }
 .gz-btn-services-adapt:hover { background: #18181b; color: #1fb755; }
-.gz-btn-services-divergence:hover { background: #18181b; color: #f9b233; }
+.gz-btn-services-diverge:hover { background: #18181b; color: #f9b233; }
 .gz-btn-back:hover { transform: translateX(-3px); }
 
 /* responsive: the only rules that cannot be inline — viewport-conditional layout */

@@ -7,8 +7,8 @@
     return [1, 3, 5].map(function (i) { return parseInt(hex.slice(i, i + 2), 16); }).join(',');
   }
 
-  // ---- flip cards (Make / Play / Adapt / Divergence) ----------------------------------
-  var LENSES = ['make', 'play', 'adapt', 'divergence'];
+  // ---- flip cards (Make / Play / Adapt / diverge) ----------------------------------
+  var LENSES = ['make', 'play', 'adapt', 'diverge'];
   var flipped = {};
 
   LENSES.forEach(function (key) {
@@ -63,16 +63,16 @@
     Make: 'lens-icons/make-icon.svg',
     Play: 'lens-icons/play-icon.svg',
     Adapt: 'lens-icons/adapt-icon.svg',
-    Divergence: 'lens-icons/divergence-icon.svg'
+    diverge: 'lens-icons/diverge-icon.svg'
   };
   // one theme per lens: the tile fill, its hard drop-shadow accent, and how the icon is tinted.
   var TILE_THEMES = {
     Make: { fill: '#084a8c', shadow: '#f9b233', tint: 'brightness(0) invert(1)' },
     Play: { fill: '#e8323a', shadow: '#084a8c', tint: 'brightness(0) invert(1)' },
     Adapt: { fill: '#1fb755', shadow: '#e8323a', tint: 'brightness(0) invert(1)' },
-    Divergence: { fill: '#f9b233', shadow: '#1fb755', tint: 'brightness(0)' }
+    diverge: { fill: '#f9b233', shadow: '#1fb755', tint: 'brightness(0)' }
   };
-  var ALL_LENSES = ['Make', 'Play', 'Adapt', 'Divergence'];
+  var ALL_LENSES = ['Make', 'Play', 'Adapt', 'diverge'];
   var COLS = 20, ROWS = 10, RADIUS = 170;
 
   var TILE_CONFIGS = [
@@ -80,7 +80,7 @@
     { sectionId: 'make', tilesId: 'tiles-make', lenses: ['Make'], dark: false },
     { sectionId: 'play', tilesId: 'tiles-play', lenses: ['Play'], dark: false },
     { sectionId: 'adapt', tilesId: 'tiles-adapt', lenses: ['Adapt'], dark: true },
-    { sectionId: 'divergence', tilesId: 'tiles-divergence', lenses: ['Divergence'], dark: true },
+    { sectionId: 'diverge', tilesId: 'tiles-diverge', lenses: ['diverge'], dark: true },
     { sectionId: 'make-it-matter', tilesId: 'tiles-mim', lenses: ALL_LENSES, dark: false }
   ];
 
